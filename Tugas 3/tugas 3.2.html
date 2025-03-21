@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Simpel</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: #f5f5f5;
+      }
+
+      .resume-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+      }
+
+      .about {
+        background-color: #f8f8f8;
+        width: 15%;
+        padding: 30px 0;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .about h1 {
+        font-size: 6vw;
+        color: #ddd;
+        font-weight: bold;
+        letter-spacing: 0.5vw;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 10% 5%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4%;
+      }
+
+      .profile-info {
+        flex: 1;
+        max-width: 80%;
+      }
+
+      .profile-image {
+        width: 9%;
+        min-width: 1px;
+        height: 200px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        position: fixed;
+        top: 90px;
+        left: 1500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .name {
+        font-size: 3vw;
+        font-weight: bold;
+        margin-bottom: 1%;
+      }
+
+      .job-title {
+        color: #777;
+        font-size: 1.5vw;
+        margin-bottom: 3%;
+        font-style: italic;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .tagline {
+        font-size: 1.8vw;
+        color: #333;
+        margin-bottom: 3%;
+      }
+
+      .description {
+        font-size: 1vw;
+        line-height: 1.5;
+        color: #555;
+        margin-bottom: 3%;
+        max-width: 50%;
+      }
+
+      .contact-info {
+        position: absolute;
+        top: 370px;
+        left: 1225px;
+        background-color: #f8f8f8;
+        width: 30%;
+        padding: 60px 10px;
+      }
+
+      .contact-info a {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .info-item {
+        display: flex;
+        margin-bottom: 3%;
+        font-size: 1vw;
+      }
+
+      .info-label {
+        width: 100%;
+        min-width: 70px;
+        color: #333;
+      }
+
+      .download-btn {
+        display: inline-block;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        padding: 1% 3%;
+        border-radius: 30px;
+        font-size: 1vw;
+        margin-top: 3%;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <div class="about">
+        <h1>ABOUT.</h1>
+      </div>
+
+      <div class="main-content">
+        <div class="header">
+          <div class="profile-info">
+            <h1 class="name">AJI ILHAM</h1>
+            <p class="job-title">Web Designer / Developer</p>
+
+            <p class="tagline">
+              A <b>Talented Freelancer</b> Located<br />In Our Lovely Earth
+            </p>
+
+            <p class="description">
+              Next is an interactive communication agency specialized in website
+              design, print support, which do not have secret anymore for us. We
+              deliver our clients the best products in the domain which we
+              master best. Our team brings a very specific value to your
+              projects.
+            </p>
+
+            <a href="#" class="download-btn">MY PORTFOLIO ></a>
+          </div>
+
+          <div class="profile-image">
+            <img src="ftprofil.png" width="160" height="190" />
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-label">
+              <b>Birthdate:</b><a> 24 February 2005</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <b>Phone:</b><a> (+62) 8953 9771 5600</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <b>Email:</b><a> ajiilham8386@myemail.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <b>Website:</b><a> www.mywebsite.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">
+              <b>Address:</b><a> Slogohimo, Wonogiri, Indonesia</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

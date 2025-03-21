@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Biodata Diri</title>
+    <style>
+      form {
+        width: 350px;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        padding: 5px;
+      }
+      input,
+      select {
+        width: 100%;
+      }
+      .submit-btn {
+        margin-top: 10px;
+        text-align: left;
+      }
+      .notification {
+        display: none;
+        background-color: #f0f8ff;
+        border: 1px solid #4682b4;
+        padding: 10px;
+        margin-top: 10px;
+        text-align: center;
+        width: 350px;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="biodataForm" onsubmit="showNotification(event)">
+      <h2>Biodata Diri</h2>
+      <table>
+        <tr>
+          <td>Nama Depan</td>
+          <td>
+            <input
+              type="text"
+              id="namaDepan"
+              placeholder="Nama Depan"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Nama Belakang</td>
+          <td>
+            <input
+              type="text"
+              id="namaBelakang"
+              placeholder="Nama Belakang"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Hobi</td>
+          <td>
+            <select id="hobi" required>
+              <option value="">Pilih hobi</option>
+              <option value="membaca">Main Game</option>
+              <option value="menulis">Rebahan</option>
+              <option value="olahraga">Makan</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td>
+            <select id="jenisKelamin" required>
+              <option value="">Pilih Jenis Kelamin</option>
+              <option value="laki">Laki-laki</option>
+              <option value="perempuan">Perempuan</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="email" id="email" placeholder="Email" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Alamat</td>
+          <td>
+            <input type="text" id="alamat" placeholder="Alamat" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Nomor Handphone</td>
+          <td>
+            <input
+              type="text"
+              id="nomorHP"
+              placeholder="Nomor Handphone"
+              required
+            />
+          </td>
+        </tr>
+      </table>
+      <div class="submit-btn">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+
+    <div id="notification" class="notification">Biodata berhasil disimpan!</div>
+
+    <script>
+      function showNotification(event) {
+        event.preventDefault();
+
+        const namaDepan = document.getElementById("namaDepan").value;
+        const namaBelakang = document.getElementById("namaBelakang").value;
+        const hobi = document.getElementById("hobi").value;
+        const jenisKelamin = document.getElementById("jenisKelamin").value;
+        const email = document.getElementById("email").value;
+        const alamat = document.getElementById("alamat").value;
+        const nomorHP = document.getElementById("nomorHP").value;
+
+        if (
+          namaDepan &&
+          namaBelakang &&
+          hobi &&
+          jenisKelamin &&
+          email &&
+          alamat &&
+          nomorHP
+        ) {
+          document.getElementById("notification").style.display = "block";
+
+          document.getElementById("biodataForm").reset();
+
+          setTimeout(function () {
+            document.getElementById("notification").style.display = "none";
+          }, 3000);
+        }
+      }
+    </script>
+  </body>
+</html>
